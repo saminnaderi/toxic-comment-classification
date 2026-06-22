@@ -30,9 +30,9 @@ toxic-comment-classification/
 │   └── 01_data_exploration.ipynb
 │   └── 02_eda.ipynb
 │   └── 03_tokenization.ipynb
-│   └── 04_BiLSTM.ipynb
 ├── src/
 ├── models/
+│   ├── 01_BiLSTM.ipynb
 ├── submissions/
 │   ├── 01_submission_bilstm.csv
 ├── README.md
