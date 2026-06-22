@@ -32,6 +32,8 @@ toxic-comment-classification/
 │   └── 04_BiLSTM.ipynb
 ├── src/
 ├── models/
+├── submissions/
+│   ├── 01_submission_bilstm.csv
 ├── README.md
 └── requirements.txt
 ```
