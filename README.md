@@ -28,6 +28,8 @@ toxic-comment-classification/
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
 │   └── 02_eda.ipynb
+│   └── 03_tokenization.ipynb
+│   └── 04_BiLSTM.ipynb
 ├── src/
 ├── models/
 ├── README.md
@@ -39,7 +41,7 @@ toxic-comment-classification/
 - [x] Environment Setup
 - [x] Data Exploration
 - [x] Exploratory Data Analysis
-- [ ] Text Preprocessing
+- [x] Text Preprocessing
 - [ ] Feature Engineering
 - [ ] Model Training
 - [ ] Evaluation
