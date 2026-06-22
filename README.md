@@ -26,7 +26,8 @@ toxic-comment-classification/
 
 ├── data/
 ├── notebooks/
-│   ├── 01_data_exploration.ipynb
+│   ├── 00_colab_setup.ipynb
+│   └── 01_data_exploration.ipynb
 │   └── 02_eda.ipynb
 │   └── 03_tokenization.ipynb
 │   └── 04_BiLSTM.ipynb
