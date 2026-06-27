@@ -1,4 +1,22 @@
-data/
-__pycache__/
+# Data and generated artifacts — too large / not ours to redistribute
+data/*.csv
+data/*.zip
+data/**/*.csv
+artifacts/*.npy
+artifacts/*.pkl
+
+# Trained model weights — regenerate by re-running the notebooks in models/
+# (the .ipynb training notebooks themselves ARE committed — only the weights are excluded)
+models/bilstm/*.keras
+models/bilstm/*.h5
+models/distilbert/distilbert_jigsaw_final/
+
+# Notebook / Python housekeeping
 .ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Environment
 .env
+venv/
