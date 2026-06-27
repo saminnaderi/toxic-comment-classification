@@ -63,7 +63,7 @@ toxic-comment-classification/
 │       ├── distilbert.ipynb
 │       └── distilbert_jigsaw_final/ # not committed
 │
-└── results/
+└── submissions/
     ├── submission_baseline.csv
     ├── submission_bilstm.csv
     ├── submission_distilbert.csv
