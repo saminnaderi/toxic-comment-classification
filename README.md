@@ -17,11 +17,11 @@ a sigmoid output layer with binary cross-entropy loss instead of softmax.
 
 | Model | Type | Notebook | Mean ROC-AUC |
 |---|---|---|---|
-| Naive Bayes | Baseline | `notebooks/04_baselines.ipynb` | _fill in after running_ |
-| Logistic Regression | Baseline | `notebooks/04_baselines.ipynb` | _fill in after running_ |
-| Linear SVM | Baseline | `notebooks/04_baselines.ipynb` | _fill in after running_ |
-| BiLSTM + GloVe | Deep learning | `models/bilstm/bilstm.ipynb` | 0.9756 (test set) |
-| DistilBERT | Transformer | `models/distilbert/distilbert.ipynb` | _fill in after running_ |
+| Naive Bayes | Baseline | `notebooks/04_baselines.ipynb` | 0.9298 |
+| Logistic Regression | Baseline | `notebooks/04_baselines.ipynb` | 0.9830 |
+| Linear SVM | Baseline | `notebooks/04_baselines.ipynb` | 0.9970 |
+| BiLSTM + GloVe | Deep learning | `models/bilstm/bilstm.ipynb` | 0.9756 |
+| DistilBERT | Transformer | `models/distilbert/distilbert.ipynb` | 0.9744 |
 
 All models are evaluated with the same metric — **mean column-wise ROC-AUC across the
 6 labels** — so the numbers above are directly comparable. Fill in the baseline and
@@ -63,7 +63,7 @@ toxic-comment-classification/
 │       ├── distilbert.ipynb
 │       └── distilbert_jigsaw_final/ # not committed
 │
-└── results/
+└── submissions/
     ├── submission_baseline.csv
     ├── submission_bilstm.csv
     ├── submission_distilbert.csv
@@ -128,6 +128,10 @@ Baselines, EDA, and data exploration are run locally in this project; BiLSTM and
 DistilBERT were trained on Colab's free T4 GPU. Each training notebook saves its
 trained weights to Drive (so they survive the Colab session ending), to be copied
 locally into `models/`; submission CSVs go into `results/`.
+
+## Why baselines and BiLSTM use different text cleaning?
+
+TF-IDF benefits from lighter touch since its own math already handles common-word downweighting; the BiLSTM benefits from heavier, more deliberate cleaning since it has no equivalent built-in mechanism. Using identical preprocessing for both would mean making at least one of them slightly worse just for the sake of looking consistent — so the two functions are kept separate on purpose, and documented together in one file (src/text_cleaning.py) so they don't silently drift out of sync with each other over time.
 
 ## Evaluation metric
 
