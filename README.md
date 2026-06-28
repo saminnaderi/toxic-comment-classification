@@ -129,6 +129,10 @@ DistilBERT were trained on Colab's free T4 GPU. Each training notebook saves its
 trained weights to Drive (so they survive the Colab session ending), to be copied
 locally into `models/`; submission CSVs go into `results/`.
 
+## Why baselines and BiLSTM use different text cleaning?
+
+TF-IDF benefits from lighter touch since its own math already handles common-word downweighting; the BiLSTM benefits from heavier, more deliberate cleaning since it has no equivalent built-in mechanism. Using identical preprocessing for both would mean making at least one of them slightly worse just for the sake of looking consistent — so the two functions are kept separate on purpose, and documented together in one file (src/text_cleaning.py) so they don't silently drift out of sync with each other over time.
+
 ## Evaluation metric
 
 All models are scored with **mean column-wise ROC-AUC** — the same metric used by the
