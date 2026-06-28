@@ -19,9 +19,9 @@ a sigmoid output layer with binary cross-entropy loss instead of softmax.
 |---|---|---|---|
 | Naive Bayes | Baseline | `notebooks/04_baselines.ipynb` | 0.9298 |
 | Logistic Regression | Baseline | `notebooks/04_baselines.ipynb` | 0.9830 |
-| Linear SVM | Baseline | `notebooks/04_baselines.ipynb` | 09970 |
-| BiLSTM + GloVe | Deep learning | `models/bilstm/bilstm.ipynb` | 0.9756 (test set) |
-| DistilBERT | Transformer | `models/distilbert/distilbert.ipynb` | _fill in after running_ |
+| Linear SVM | Baseline | `notebooks/04_baselines.ipynb` | 0.9970 |
+| BiLSTM + GloVe | Deep learning | `models/bilstm/bilstm.ipynb` | 0.9756 |
+| DistilBERT | Transformer | `models/distilbert/distilbert.ipynb` | 0.9744 |
 
 All models are evaluated with the same metric — **mean column-wise ROC-AUC across the
 6 labels** — so the numbers above are directly comparable. Fill in the baseline and
